@@ -60,14 +60,14 @@ def randomagent():
 def hostinfos(URL, https):
 	IP = socket.gethostbyname(URL)
 	print INFO + "URL to scan : "+ URL
-	print INFO + "Server IP : "+ IP + "\n"
+	print INFO + "Server IP : "+ IP
 	
 	if https == True:
 		r = requests.get("https://" + URL)
 	else:
 		r = requests.get("http://" + URL)
 	typeserv = r.headers['Server']
-	print INFO + "Server : " + typeserv
+	print INFO + "Server : " + typeserv + "\n"
 
 
 def dirbrute(URL, agent, https):
