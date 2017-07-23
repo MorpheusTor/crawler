@@ -66,7 +66,7 @@ def dirbrute(URL, agent, https):
 	print PASS + "Starting brute mode."
 	print PASS + "The URL is under scan."
 	print INFO + "The scan can take several minutes."
-	t = 6768
+	t = 6769
 	if agent == True:
 		print INFO + "Requests under random User-agent.\n"
 	else:
