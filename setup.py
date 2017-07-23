@@ -20,13 +20,13 @@ def setup():
 	except ImportError:
 		print ERROR + "Module socks not installed."
 		print INFO + "Installing socks module....."
-		os.system("sudo apt update && sudo apt install python-socks")
+		os.system("sudo apt-get update && sudo apt-get install python-socks")
 	try:
 		import requests
 	except ImportError:
 		print ERROR + "Module requests not installed."
 		print INFO + "Installing requests module...."
-		os.system("sudo apt install python-pip && sudo pip install requests")
+		os.system("sudo apt-get install python-pip && sudo pip install requests")
 
 	print PASS + "Module socks and requests installed."
 
