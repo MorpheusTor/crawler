@@ -4,12 +4,12 @@
 import sys, os
 import socket, socks
 ###################################################################
-# Uncomment this 2 lines to do the requests under TOR network.    #
+# Uncomment these 2 lines to do the requests under TOR network.    #
 #                                                                 #
 #socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)#
 #socket.socket = socks.socksocket                                 #
 #                                                                 #
-# Warning, with the option --dir the requests are (very long)     #
+# Warning, The --dir option makes the requests a lot longer     #
 # Do not use that to dir-brute a website                          #
 ###################################################################
 import random
@@ -190,7 +190,7 @@ def crawl(URL, agent, https):
 	print MED + "Found "+num+" true URLs."
 	w.write("\n\nFound "+num+" true URLs.\n\n")
 
-	print INFO + "Report save on this directory as 'report.txt'."
+	print INFO + "Report saved in this directory as 'report.txt'."
 	print PASS + "Scan finished at "+time.strftime("%H:%M:%S")
 
 # def htmlcopy(URL):
@@ -217,7 +217,7 @@ def main():
 
 	elif options.url:
 	    ## URL settings // Your http or https url is not compatible with urllib2
-		## when you complete the request, so i will solve that for you :)
+		## As soon as the request is complete, I will solve that for you :)
 		https = False
 		if "http://" in URL:
 			print ERROR + "Invalid URL."
@@ -229,7 +229,7 @@ def main():
 			URL = URL.replace("https://", "")
 			print MED + "Replacing URL to avoid URLError. [-https]\n"
 		
-		## www.test.com/ -- '/' is not compatible too so i solve that :)
+		## www.test.com/ -- '/' is not compatible either so I'll solve that for you :)
 		if "/" in URL:
 			URL = URL.replace("/", "")
 		## END ##
