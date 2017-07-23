@@ -31,7 +31,7 @@ def setup():
 	print PASS + "Module socks and requests installed."
 
 	print INFO + "Installing TOR....."
-	os.system("sudo apt install tor && sudo service tor restart")
+	os.system("sudo apt-get install tor && sudo service tor restart")
 	print PASS + "TOR setting up."
 
 	print INFO + "Copying program to '/usr/bin/crawler'"
